@@ -1,0 +1,109 @@
+@\import "https://valeriolyndon.github.io/MAL-Public-List-Designs/Clarity%20Theme/Theme%20-%20Compressed.css";
+@\import "https://malscraper.azurewebsites.net/covers/auto/presets/dataimagelinkbefore";
+
+
+@\import "https://valeriolyndon.github.io/MAL-Public-List-Designs/Clarity%20Theme/Mod%20-%20Dark%20Mode%20Compressed.css";
+body { --avatar: url(https://zippyimage.com/images/2021/11/17/a7740cf1bb972ece3996a38de426e483.jpg); } body { --name: "Tkingsz\a   "; }body { --character: none; }
+body { --banner: url(https://ca-qc-1.zippyimage.com/2021/06/08/27293a25471dbe56fd00042e33fa6407.jpg); }
+
+/*-S-T-A-R-T--------------------*\
+| Favourite Hearts (Left) R0.4   |
+\*------------------------------*/
+.data.tags span{padding:0}.data.tags span a{margin:1px 0}.data.tags span a[href*="=Favorite"],.data.tags span a[href*="=Favourite"]{position:absolute;left:-34px;top:calc(50% - 13px);width:26px;height:26px;padding:0;background:var(--bg);border-radius:50%;color:#ff65ad!important;font-size:0!important;line-height:23px;overflow:hidden;box-shadow:0 1px 2px rgba(0,0,0,.2)}.data.tags span a[href*="=Favorite"]:before,.data.tags span a[href*="=Favourite"]:before{content:"♥";font-size:26px}
+/*------------------------E-N-D-*/
+/*-S-T-A-R-T--------------------*\
+| Per-Category  Banner Image     |
+\*------------------------------*/
+
+/* All Anime */
+[data-query*='status":7'] { --banner: url(https://ca-qc-1.zippyimage.com/2021/06/08/a06feead543d4916d790f44243122e82.jpg); }
+/* Watching/Reading */
+[data-query*='status":1'] { --banner: url(https://ca-qc-1.zippyimage.com/2021/06/08/f4d8eedacc1aa18c1d5f86bbaeec1322.jpg); }
+/* Completed */
+[data-query*='status":2'] { --banner: url(https://ca-qc-1.zippyimage.com/2021/06/08/ec17a9f4bff9412955313bf535e7d70d.jpg); }
+/* Onhold */
+[data-query*='status":3'] { --banner: url(https://ca-qc-1.zippyimage.com/2021/06/08/f00f9efa89dd86f1034592ca6931d143.jpg); }
+/* Dropped */
+[data-query*='status":4'] { --banner: url(https://ca-qc-1.zippyimage.com/2021/06/08/6774e6db945f5e10fafab5b29142cbe1.jpg); }
+/* Planned */
+[data-query*='status":6'] { --banner: url(https://ca-qc-1.zippyimage.com/2021/06/08/3ee4e7635f0da06125b5f3198f8949c0.jpg); }
+/*==============================*\
+|       Score  Descriptors       |
+\* --- - --- - ---- - --- - --- */
+
+.score-na::before {
+	content: "Haven't decided";
+}
+
+.score-1::before {
+	content: "Appaling";
+}
+
+.score-2::before {
+	content: "Horrible";
+}
+
+.score-3::before {
+	content: "Very Bad";
+}
+
+.score-4::before {
+	content: "Bad";
+}
+
+.score-5::before {
+	content: "Average";
+}
+
+.score-6::before {
+	content: "Alright";
+}
+
+.score-7::before {
+	content: "Good";
+}
+
+.score-8::before {
+	content: "Great";
+}
+
+.score-9::before {
+	content: "Fantastic";
+}
+
+.score-10::before {
+	content: "Masterpiece";
+}
+
+/* Internals */
+
+.score-label {
+	position: relative;
+	display: inline-block;
+	z-index: 0;
+	transition: color 0.2s ease;
+}
+
+.score-label:hover {
+	color: #fff !important;
+}
+
+.score-label::before {
+	position: absolute;
+	top: -4px;
+	left: -8px;
+	z-index: -1;
+	display: block;
+	padding: 4px 8px 4px calc(100% + 12px);
+	background: #111;
+	border-radius: 4px;
+	opacity: 0;
+	transition: opacity 0.2s ease;
+	white-space: pre;
+	text-align: left;
+	pointer-events: none;
+}
+
+.score-label:hover::before {
+	opacity: 1;
+}
